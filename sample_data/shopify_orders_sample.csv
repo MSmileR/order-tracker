@@ -1,0 +1,5 @@
+Name,Email,Financial Status,Created at,Lineitem name,Lineitem quantity,Lineitem price,Total,Shipping Name,Shipping Address1,Shipping City,Shipping Zip,Shipping Country,Notes
+#1001,anna.novakova@example.com,paid,2026-10-28 14:22:10 +0100,Handmade candle,2,12.00,29.00,Anna Novakova,Dlouha 12,Praha,11000,CZ,Gift wrap please
+#1001,,,,Wooden spoon,1,5.00,,,,,,,
+#1002,jan.svoboda@example.com,paid,2026-10-30 09:05:44 +0100,Ceramic mug,1,18.50,23.50,Jan Svoboda,Hlavni 5,Brno,60200,CZ,
+#1003,anna.novakova@example.com,pending,2026-11-02 18:40:02 +0100,Handmade candle,3,12.00,41.00,Anna Novakova,Dlouha 12,Praha,11000,CZ,
