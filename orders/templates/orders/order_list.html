@@ -1,0 +1,21 @@
+<h1>Orders</h1>
+<table>
+    <tr>
+        <th>Shopify ID</th><th>Customer</th><th>Status</th>
+        <th> Deadline</th><th>Price</th><th>Profit</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td>{{ order.shopify_order_id }}</td>
+        <td>{{ order.customer.name }}</td>
+        <td>{{ order.get_status_display }}</td>
+        <td>{{ order.deadline|default:"-" }}</td>
+        <td>{{ order.price }}</td>
+        <td>{{ order.profit }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="6">No orders yet.</td>
+    </tr>
+    {% endfor %}
+</table>
