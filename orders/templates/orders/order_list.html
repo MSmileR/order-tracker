@@ -1,4 +1,10 @@
 <h1>Orders</h1>
+<p>
+  <a href="{% url 'order_list' %}">All</a>
+  {% for value, label in statuses %}
+    | <a href="?status={{ value }}">{{ label }}</a>
+  {% endfor %}
+</p>
 <table>
     <tr>
         <th>Shopify ID</th><th>Customer</th><th>Status</th>

@@ -17,3 +17,17 @@ class OrderListView(LoginRequiredMixin, generic.ListView):
     template_name = 'orders/order_list.html'
     context_object_name = 'orders'
     ordering = ['-order_date']
+
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        status = self.request.GET.get('status')
+        if status:
+            queryset = queryset.filter(status=status)
+        return queryset
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['statuses'] = Order.STATUS_CHOICES
+        return context
