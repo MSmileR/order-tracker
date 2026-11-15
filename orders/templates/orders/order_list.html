@@ -6,7 +6,7 @@
     </tr>
     {% for order in orders %}
     <tr>
-        <td>{{ order.shopify_order_id }}</td>
+        <td><a href="{% url 'order_detail' order.pk %}">{{ order.shopify_order_id }}</a></td>
         <td>{{ order.customer.name }}</td>
         <td>{{ order.get_status_display }}</td>
         <td>{{ order.deadline|default:"-" }}</td>

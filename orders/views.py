@@ -5,6 +5,12 @@ from .models import Order
 
 # Create your views here.
 
+
+class OrderDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Order
+    login_url = '/admin/login/'
+    template_name = 'orders/order_detail.html'
+
 class OrderListView(LoginRequiredMixin, generic.ListView):
     model = Order
     login_url = '/admin/login/'

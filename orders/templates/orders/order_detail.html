@@ -1,0 +1,14 @@
+<h1>Order {{ order.shopify_order_id }}</h1>
+<p><a href="{ % url 'order_list' %}">&larr; Back to Order List</a></p>
+<ul>
+    <li>Customer: {{ order.customer.name }}</li>
+    <li>Email: {{ order.customer.email|default:"-" }}</li>
+    <li>Address: {{ order.customer.address|default:"-" }}</li>
+    <li>Status: {{ order.get_status_display }}</li>
+    <li>Order Date: {{ order.order_date }}</li>
+    <li>Deadline: {{ order.deadline|default:"-" }}</li>
+    <li>Price: {{ order.price }}</li>
+    <li>Materials Cost: {{ order.materials_cost }}</li>
+    <li>Profit: {{ order.profit }}</li>
+    <li>Notes: {{ order.notes|default:"-" }}</li>
+</ul>
